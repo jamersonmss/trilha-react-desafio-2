@@ -36,8 +36,9 @@ function App() {
   const handleRemoveRepo = (id) => {
     console.log('Removendo registro', id);
 
-    // utilizar filter.
-  }
+    // Usando filter para remover o repositório com o ID correspondente
+    setRepos(prev => prev.filter(repo => repo.id !== id));
+  };
 
 
   return (
